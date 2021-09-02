@@ -1,15 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom"
 
-export class Navbar extends Component {
-    // constructor(props) {
-    //     super(props);
-    //   }
-    render() {
-
+const Navbar = ()=> {
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
                     <div className="container-fluid">
                         <Link className="navbar-brand" to="/">NEWs-room</Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,9 +15,6 @@ export class Navbar extends Component {
                                 <li className="nav-item">
                                     <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                                 </li>
-                                {/* <li className="nav-item">
-                                    <Link className="nav-link" to="/business" onClick={(e) => this.props.changeState("business")}>Business</Link>
-                                </li> */}
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/business">Business</Link>
                                 </li>
@@ -47,26 +39,6 @@ export class Navbar extends Component {
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/about">About us</Link>
                                 </li>
-                                {/* <li className="nav-item dropdown d-flex" >
-                                    <a className="nav-link dropdown-toggle"
-                                        href="#"
-                                        id="navbarDropdown"
-                                        role="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                        Change contry
-                                    </a>
-                                    <ul
-                                        className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    </ul>
-                                </li> */}
                             </ul>
                         </div>
                     </div>
@@ -74,7 +46,5 @@ export class Navbar extends Component {
             </div>
         )
     }
-}
-
 export default Navbar
 
